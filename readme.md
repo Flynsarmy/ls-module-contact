@@ -8,11 +8,46 @@ Provides a contact form for your store.
 1. Done!
 
 ## Usage
-Follow the instructions here: [http://forum.lemonstandapp.com/topic/1572-ls-module-contact/](http://forum.lemonstandapp.com/topic/1572-ls-module-contact/)
 
-## Requirements
+Create a `Contact` page with this content:
 
-* Module: [Tweak](https://github.com/ericmuyser/ls-module-tweak)
+```php
+<?
+	$redirect = root_url('/');
+	
+	$name = post('name', 'Name');
+	$email = post('email', 'Email');
+	$message = post('message', 'Comment/Question');
+	$phone = post('phone', 'Phone');
+?>
 
-## TODO
-* Subscribers
+<h1>Contact</h1>
+
+<?= open_form(array('onsubmit' => "return $(this).sendRequest('contact:on_submit')")) ?>
+  <input type="hidden" name="redirect" value="<?= $redirect ?>" />
+  <input type="hidden" name="flash" value="Thank you! We will get back to you shortly." />
+  
+  <ul>
+    <li>
+      <input type="text" maxlength="64" size="32" name="name" value="<?= $name ?>" />
+    </li>
+    <li>
+      <input type="text" maxlength="2048" size="32" name="email" value="<?= $email ?>" />
+    </li>
+    <li>
+      <textarea name="message" cols="32" rows="12"><?= $message ?></textarea>
+    </li>
+    <li>
+      <input type="text" maxlength="64" size="32" name="phone" value="<?= $phone ?>" />
+    </li>
+  </ul>
+  
+  <input type="submit" value="Submit" />
+<?= close_form() ?>
+```
+
+## Links
+
+* [Marketplace](https://lemonstandapp.com/marketplace/module/contact/)
+* [Discussion](http://forum.lemonstandapp.com/topic/2235-module-contact/)
+* [Source](https://github.com/limewheel/ls-module-contact)
