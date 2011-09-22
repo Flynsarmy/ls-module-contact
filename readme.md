@@ -36,16 +36,16 @@ Create a `Contact` page with this content:
   
   <ul>
     <li>
-      <input type="text" maxlength="64" size="32" name="name" value="<?= $name ?>" />
+      <input type="text" name="name" value="<?= $name ?>" />
     </li>
     <li>
-      <input type="text" maxlength="2048" size="32" name="email" value="<?= $email ?>" />
+      <input type="text" name="email" value="<?= $email ?>" />
     </li>
     <li>
       <textarea name="message" cols="32" rows="12"><?= $message ?></textarea>
     </li>
     <li>
-      <input type="text" maxlength="64" size="32" name="phone" value="<?= $phone ?>" />
+      <input type="text" name="phone" value="<?= $phone ?>" />
     </li>
   </ul>
   

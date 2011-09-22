@@ -6,6 +6,10 @@
 		public $form_edit_title = 'Contact Settings';
 		public $form_model_class = 'Contact_Configuration';
 		public $form_redirect = null;
+		
+		public $strings = array(
+			'controller_title' => 'Contact'
+		);
 
 		protected $required_permissions = array('contact:manage_settings');
 

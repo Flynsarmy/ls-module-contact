@@ -1,14 +1,13 @@
 <?
 
 	class Contact_Module extends Core_ModuleBase {
-		protected function get_info() {
+		protected function create_module_info() {
 			return new Core_ModuleInfo(
 				"Contact",
 				"Provides a contact form for your store.",
 				"Limewheel Creative, Inc."
 			);
 		}
-
 
 		public function build_ui_permissions($host) {
 			$host->add_field($this, 'manage_settings', 'Manage settings', 'left')->renderAs(frm_checkbox)->comment('View and manage the settings.', 'above');
@@ -18,7 +17,7 @@
 			$user = Phpr::$security->getUser();
 			
 			$tabs = array(
-				'settings' => array('settings', 'Settings', 'settings')
+				'settings' => array('settings', 'Settings', 'manage_settings')
 			);
 
 			$first_tab = null;
@@ -43,7 +42,7 @@
 		 */
 		
 		protected function createModuleInfo() {
-			return $this->get_info();
+			return $this->create_module_info();
 		}
 		
 		public function buildPermissionsUi($host) {
