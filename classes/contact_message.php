@@ -24,12 +24,14 @@
 			
 			$template = System_EmailTemplate::create()->find_by_code('site:contact');
 			$template->subject = str_replace(array('{name}'), array($to_name), $template->subject);
+			
 			$template->content = str_replace(
 				array(
 					'{name}', 
 					'{message}', 
 					'{phone}', 
-					'{email}'), 
+					'{email}'
+				), 
 				array(
 					$from_name, 
 					post('message'), 
