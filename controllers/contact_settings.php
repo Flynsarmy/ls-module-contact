@@ -28,7 +28,7 @@
 				$this->viewData['form_model'] = $config->load();
 			}
 			catch(exception $ex) {
-				$this->_controller->handlePageError($ex);
+				$this->handlePageError($ex);
 			}
 		}
 		

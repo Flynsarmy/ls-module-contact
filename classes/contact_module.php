@@ -5,7 +5,7 @@
 			return new Core_ModuleInfo(
 				"Contact",
 				"Provides a contact form for your store.",
-				"Limewheel Creative, Inc."
+				"Limewheel Creative Inc."
 			);
 		}
 
