@@ -3,3 +3,4 @@
 #3|0.0.3 Fixed `site:contact` creation. Removed `site:settings` dependency. Minor bug fixes.
 #4|0.0.4 Necessary fix.
 #5|0.0.5 Change template type to `system`.
+#6|0.0.6 Settings page moved to the System/Settings tab. Minor fixes on the configuration form.

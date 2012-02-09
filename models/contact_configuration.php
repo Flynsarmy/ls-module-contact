@@ -10,8 +10,8 @@
 		}
 		
 		protected function build_form() {
-			$this->add_field('company_email', 'Company E-mail', 'full', db_varchar)->tab('Contact')->comment('Enter an company email which will be used for contact emails.');
-			$this->add_field('company_title', 'Company Title', 'full', db_varchar)->tab('Contact')->comment('Enter an company title which will be used for contact emails.');
+			$this->add_field('company_email', 'Contact e-mail', 'full', db_varchar)->comment('Specify the company contact email address which will be used for incoming messages.', 'above')->validation()->required('Please specify the email address')->email();
+			$this->add_field('company_title', 'Company title', 'full', db_varchar);
 		}
 		
 		protected function init_config_data() {
