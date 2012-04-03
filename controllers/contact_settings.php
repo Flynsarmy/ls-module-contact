@@ -23,7 +23,7 @@
 		public function index() {
 			try {
 				$this->app_page_title = 'Contact module';
-				
+
 				$config = new Contact_Configuration();
 				$this->viewData['form_model'] = $config->load();
 			}

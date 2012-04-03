@@ -41,9 +41,7 @@
 				$template->content
 			);
 			
-			$users = Users_User::list_users_having_permission('cms', 'manage_pages');
-			
-			$template->send_to_team($users, $template->content, null, null, $from_email, $from_name);
+			$template->send($to_email, $template->content, $to_name, $from_email, $from_name);
 			
 			if($flash)
 				Phpr::$session->flash['success'] = $flash;
